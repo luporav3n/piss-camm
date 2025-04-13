@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PISS Logger</title>
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const camId = urlParams.get('id') || 'UNKNOWN';
+      const referer = document.referrer || 'NO_REF';
+      console.log("CAM Hit:", camId, "From:", referer);
+    };
+  </script>
+</head>
+<body>
+  <p style="display:none;">PISS logger active</p>
+</body>
+</html>
